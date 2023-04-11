@@ -9,7 +9,7 @@ public class MessageDTO{
     private String message;
 
 
-    public MessageDTO(String sender, String type) {
+    public MessageDTO(String sender, String type, String message) {
         this.sender = sender;
         this.type = type;
         this.message = message;

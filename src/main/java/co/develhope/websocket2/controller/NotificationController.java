@@ -35,7 +35,7 @@ public class NotificationController{
     @MessageMapping("/client-message")
     @SendTo("/topic/broadcast")
     public MessageDTO sendMessageNewUser(ClientMessageDTO clientMessageDTO){
-        return new MessageDTO("frontend","Messaggio da " + clientMessageDTO.getClientName() + ": " + clientMessageDTO.getClientMsg());
+        return new MessageDTO(clientMessageDTO.getClientName(), clientMessageDTO.getClientAlert(), clientMessageDTO.getClientMsg());
     }
 
 
